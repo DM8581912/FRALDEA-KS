@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "AutoApply",
+  "version": "1.0",
+  "description": "Auto fill job application forms and optionally submit them automatically.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AutoApply"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
